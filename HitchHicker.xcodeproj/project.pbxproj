@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6187C25E6D4B73402B17DD /* Pods_HitchHicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091C061E0A0B2C9F50053819 /* Pods_HitchHicker.framework */; };
 		92C0B7F220B558D80015DBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F120B558D80015DBF0 /* AppDelegate.swift */; };
 		92C0B7F420B558D80015DBF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F320B558D80015DBF0 /* ViewController.swift */; };
 		92C0B7F720B558D80015DBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C0B7F520B558D80015DBF0 /* Main.storyboard */; };
 		92C0B7F920B558D90015DBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C0B7F820B558D90015DBF0 /* Assets.xcassets */; };
 		92C0B7FC20B558D90015DBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C0B7FA20B558D90015DBF0 /* LaunchScreen.storyboard */; };
+		92C0B80720B572720015DBF0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B80620B572720015DBF0 /* GradientView.swift */; };
+		92C0B80920B5771F0015DBF0 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B80820B5771F0015DBF0 /* RoundImageView.swift */; };
+		92C0B80B20B578530015DBF0 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B80A20B578530015DBF0 /* RoundedShadowView.swift */; };
+		92C0B80D20B57A220015DBF0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B80C20B57A220015DBF0 /* CircleView.swift */; };
+		92C0B81020B57D720015DBF0 /* RoundedShadowBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B80F20B57D720015DBF0 /* RoundedShadowBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		091C061E0A0B2C9F50053819 /* Pods_HitchHicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HitchHicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0B7EE20B558D80015DBF0 /* HitchHicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchHicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0B7F120B558D80015DBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C0B7F320B558D80015DBF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,13 @@
 		92C0B7F820B558D90015DBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92C0B7FB20B558D90015DBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92C0B7FD20B558D90015DBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92C0B80620B572720015DBF0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		92C0B80820B5771F0015DBF0 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		92C0B80A20B578530015DBF0 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		92C0B80C20B57A220015DBF0 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		92C0B80F20B57D720015DBF0 /* RoundedShadowBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowBtn.swift; sourceTree = "<group>"; };
+		BCCB76216C8E104F6F323553 /* Pods-HitchHicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitchHicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HitchHicker/Pods-HitchHicker.debug.xcconfig"; sourceTree = "<group>"; };
+		F96394D2A6289ACD18E89C3C /* Pods-HitchHicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitchHicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-HitchHicker/Pods-HitchHicker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D6187C25E6D4B73402B17DD /* Pods_HitchHicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2575373F3596857E0A14B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB76216C8E104F6F323553 /* Pods-HitchHicker.debug.xcconfig */,
+				F96394D2A6289ACD18E89C3C /* Pods-HitchHicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		92C0B7E520B558D80015DBF0 = {
 			isa = PBXGroup;
 			children = (
 				92C0B7F020B558D80015DBF0 /* HitchHicker */,
 				92C0B7EF20B558D80015DBF0 /* Products */,
+				3A2575373F3596857E0A14B9 /* Pods */,
+				E64E063B56BDBFA545541CE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,9 @@
 		92C0B7F020B558D80015DBF0 /* HitchHicker */ = {
 			isa = PBXGroup;
 			children = (
+				92C0B80520B572540015DBF0 /* Controller */,
+				92C0B80420B5724C0015DBF0 /* View */,
+				92C0B80320B572430015DBF0 /* Model */,
 				92C0B7F120B558D80015DBF0 /* AppDelegate.swift */,
 				92C0B7F320B558D80015DBF0 /* ViewController.swift */,
 				92C0B7F520B558D80015DBF0 /* Main.storyboard */,
@@ -64,6 +93,40 @@
 			path = HitchHicker;
 			sourceTree = "<group>";
 		};
+		92C0B80320B572430015DBF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92C0B80420B5724C0015DBF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92C0B80620B572720015DBF0 /* GradientView.swift */,
+				92C0B80820B5771F0015DBF0 /* RoundImageView.swift */,
+				92C0B80A20B578530015DBF0 /* RoundedShadowView.swift */,
+				92C0B80C20B57A220015DBF0 /* CircleView.swift */,
+				92C0B80F20B57D720015DBF0 /* RoundedShadowBtn.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92C0B80520B572540015DBF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E64E063B56BDBFA545541CE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				091C061E0A0B2C9F50053819 /* Pods_HitchHicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92C0B80020B558D90015DBF0 /* Build configuration list for PBXNativeTarget "HitchHicker" */;
 			buildPhases = (
+				836C142C77C344033C63710C /* [CP] Check Pods Manifest.lock */,
 				92C0B7EA20B558D80015DBF0 /* Sources */,
 				92C0B7EB20B558D80015DBF0 /* Frameworks */,
 				92C0B7EC20B558D80015DBF0 /* Resources */,
+				E8977B8CDCF63A9BEDB52722 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +195,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		836C142C77C344033C63710C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HitchHicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8977B8CDCF63A9BEDB52722 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HitchHicker/Pods-HitchHicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HitchHicker/Pods-HitchHicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92C0B7EA20B558D80015DBF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C0B80D20B57A220015DBF0 /* CircleView.swift in Sources */,
 				92C0B7F420B558D80015DBF0 /* ViewController.swift in Sources */,
+				92C0B80920B5771F0015DBF0 /* RoundImageView.swift in Sources */,
+				92C0B80B20B578530015DBF0 /* RoundedShadowView.swift in Sources */,
 				92C0B7F220B558D80015DBF0 /* AppDelegate.swift in Sources */,
+				92C0B81020B57D720015DBF0 /* RoundedShadowBtn.swift in Sources */,
+				92C0B80720B572720015DBF0 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +395,7 @@
 		};
 		92C0B80120B558D90015DBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCB76216C8E104F6F323553 /* Pods-HitchHicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +414,7 @@
 		};
 		92C0B80220B558D90015DBF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F96394D2A6289ACD18E89C3C /* Pods-HitchHicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
