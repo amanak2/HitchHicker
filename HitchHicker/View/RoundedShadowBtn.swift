@@ -49,9 +49,8 @@ class RoundedShadowBtn: UIButton {
                 if finished == true{
                     spinner.startAnimating()
                     spinner.center = CGPoint(x: self.frame.width / 2 + 1, y: self.frame.width / 2 + 1)
-                    UIView.animate(withDuration: 0.2, animations: {
-                        spinner.alpha = 1.0
-                    })
+                    spinner.fadeTo(alphaValue: 0.1, withDuration: 0.2)
+                    
                 }
             }
             self.isUserInteractionEnabled = false
