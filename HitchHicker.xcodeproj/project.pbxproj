@@ -14,6 +14,8 @@
 		9249E0F420B6F96A00533468 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249E0F320B6F96A00533468 /* UIViewExt.swift */; };
 		9249E0F620B7021A00533468 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249E0F520B7021A00533468 /* LoginVC.swift */; };
 		9249E0F820B724DC00533468 /* RoundedCornersTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249E0F720B724DC00533468 /* RoundedCornersTextField.swift */; };
+		927DA6C920B81CA300992CC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 927DA6C820B81CA300992CC3 /* GoogleService-Info.plist */; };
+		927DA6CC20B81DEF00992CC3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DA6CB20B81DEF00992CC3 /* DataService.swift */; };
 		92C0B7F220B558D80015DBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F120B558D80015DBF0 /* AppDelegate.swift */; };
 		92C0B7F420B558D80015DBF0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F320B558D80015DBF0 /* HomeVC.swift */; };
 		92C0B7F720B558D80015DBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C0B7F520B558D80015DBF0 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 		9249E0F320B6F96A00533468 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		9249E0F520B7021A00533468 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9249E0F720B724DC00533468 /* RoundedCornersTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersTextField.swift; sourceTree = "<group>"; };
+		927DA6C820B81CA300992CC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		927DA6CB20B81DEF00992CC3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		92C0B7EE20B558D80015DBF0 /* HitchHicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchHicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0B7F120B558D80015DBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C0B7F320B558D80015DBF0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -87,6 +91,14 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		927DA6CA20B81DE000992CC3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				927DA6CB20B81DEF00992CC3 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		92C0B7E520B558D80015DBF0 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +120,7 @@
 		92C0B7F020B558D80015DBF0 /* HitchHicker */ = {
 			isa = PBXGroup;
 			children = (
+				927DA6CA20B81DE000992CC3 /* Services */,
 				9249E0F220B6F94500533468 /* Extentions */,
 				9249E0EF20B6AB0E00533468 /* Protocols */,
 				92C0B80320B572430015DBF0 /* Model */,
@@ -118,6 +131,7 @@
 				92C0B7F820B558D90015DBF0 /* Assets.xcassets */,
 				92C0B7FA20B558D90015DBF0 /* LaunchScreen.storyboard */,
 				92C0B7FD20B558D90015DBF0 /* Info.plist */,
+				927DA6C820B81CA300992CC3 /* GoogleService-Info.plist */,
 			);
 			path = HitchHicker;
 			sourceTree = "<group>";
@@ -222,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C0B7FC20B558D90015DBF0 /* LaunchScreen.storyboard in Resources */,
+				927DA6C920B81CA300992CC3 /* GoogleService-Info.plist in Resources */,
 				92C0B7F920B558D90015DBF0 /* Assets.xcassets in Resources */,
 				92C0B7F720B558D80015DBF0 /* Main.storyboard in Resources */,
 			);
@@ -282,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9249E0F120B6AB5D00533468 /* CenterVCDelegate.swift in Sources */,
+				927DA6CC20B81DEF00992CC3 /* DataService.swift in Sources */,
 				92C0B80D20B57A220015DBF0 /* CircleView.swift in Sources */,
 				9249E0F820B724DC00533468 /* RoundedCornersTextField.swift in Sources */,
 				9249E0F620B7021A00533468 /* LoginVC.swift in Sources */,

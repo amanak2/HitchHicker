@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var authBtn: RoundedShadowBtn!
+    @IBOutlet weak var segmentedController: UISegmentedControl!
+    @IBOutlet weak var passwordTextField: RoundedCornersTextField!
+    @IBOutlet weak var emailTextField: RoundedCornersTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleScreenTap(sender:)))
         self.view.addGestureRecognizer(tap)
@@ -20,6 +28,71 @@ class LoginVC: UIViewController {
     
     @objc func handleScreenTap(sender: UITapGestureRecognizer){
         self.view.endEditing(true)
+    }
+    
+    @IBAction func authBtnPressed(_ sender: Any) {
+        if emailTextField.text != nil && passwordTextField.text != nil {
+            authBtn.animateBtn(shouldLoad: true, withMessage: nil)
+            self.view.endEditing(true)
+            
+            if let email = emailTextField.text, let password = passwordTextField.text {
+                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                    if error == nil {
+                        if let user = user {
+                            if self.segmentedController.selectedSegmentIndex == 0 {
+                                let userData = ["provider": user.providerID] as [String: Any]
+                                DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: false)
+                            } else {
+                                let userData = ["provider": user.providerID,
+                                                "userIsDriver": true,
+                                                "pickupModeEnabled": false,
+                                                "DriverIsOnTrip": false] as [String: Any]
+                                DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: true)
+                            }
+                            print("FIR: User Logged In")
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    } else {
+                        if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                            switch errorCode {
+                            case .wrongPassword:
+                                print("FIR: Wrong Password")
+                            default:
+                                print("FIR: unexpected error occured, Please Try Again!")
+                            }
+                        }
+                        
+                        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                            if error != nil {
+                                if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                                    switch errorCode {
+                                    case .invalidEmail:
+                                        print("FIR: Invalid Email")
+                                    default:
+                                        print("FIR: unexpected error occured, Please Try Again!")
+                                    }
+                                }
+                            } else {
+                                if let user = user {
+                                    if self.segmentedController.selectedSegmentIndex == 0 {
+                                        let userData = ["provider": user.providerID] as [String: Any]
+                                        DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: false)
+                                    } else {
+                                        let userData = ["provider": user.providerID,
+                                                        "userIsDriver": true,
+                                                        "pickupModeEnabled": false,
+                                                        "DriverIsOnTrip": false] as [String: Any]
+                                        DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: true)
+                                    }
+                                }
+                                print("FIR: User Created")
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        })
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func cancleBtnPressed(_ sender: Any) {
