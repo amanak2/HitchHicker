@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var actionBtn: RoundedShadowBtn!
+    @IBOutlet weak var centerMapBtn: UIButton!
     
     var delegate: CenterVCDelegate?
     
@@ -107,6 +108,7 @@ class HomeVC: UIViewController {
     
     @IBAction func centerMapViewBtnPressed(_ sender: Any) {
         centerMapOnUserLocation()
+        centerMapBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
     }
 
     @IBAction func actionBtnPressed(_ sender: Any) {
@@ -145,6 +147,10 @@ extension HomeVC: MKMapViewDelegate {
             return view
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        centerMapBtn.fadeTo(alphaValue: 1.0, withDuration: 0.2)
     }
 }
 
