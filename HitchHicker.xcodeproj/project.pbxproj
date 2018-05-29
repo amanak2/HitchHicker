@@ -18,6 +18,7 @@
 		925DB10320BAA46100680264 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DB10220BAA46100680264 /* DriverAnnotation.swift */; };
 		927DA6C920B81CA300992CC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 927DA6C820B81CA300992CC3 /* GoogleService-Info.plist */; };
 		927DA6CC20B81DEF00992CC3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DA6CB20B81DEF00992CC3 /* DataService.swift */; };
+		92B71AEB20BC3A2500A09F5E /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B71AEA20BC3A2500A09F5E /* PassengerAnnotation.swift */; };
 		92C0B7F220B558D80015DBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F120B558D80015DBF0 /* AppDelegate.swift */; };
 		92C0B7F420B558D80015DBF0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F320B558D80015DBF0 /* HomeVC.swift */; };
 		92C0B7F720B558D80015DBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C0B7F520B558D80015DBF0 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		925DB10220BAA46100680264 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		927DA6C820B81CA300992CC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		927DA6CB20B81DEF00992CC3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		92B71AEA20BC3A2500A09F5E /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
 		92C0B7EE20B558D80015DBF0 /* HitchHicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchHicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0B7F120B558D80015DBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C0B7F320B558D80015DBF0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				92C0B80F20B57D720015DBF0 /* RoundedShadowBtn.swift */,
 				9249E0F720B724DC00533468 /* RoundedCornersTextField.swift */,
 				925DB10220BAA46100680264 /* DriverAnnotation.swift */,
+				92B71AEA20BC3A2500A09F5E /* PassengerAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				9249E0F620B7021A00533468 /* LoginVC.swift in Sources */,
 				9249E0EC20B69E3500533468 /* LeftSidePanelVC.swift in Sources */,
 				92C0B7F420B558D80015DBF0 /* HomeVC.swift in Sources */,
+				92B71AEB20BC3A2500A09F5E /* PassengerAnnotation.swift in Sources */,
 				9249E0EE20B69F3F00533468 /* ContainerVC.swift in Sources */,
 				9249E0F420B6F96A00533468 /* UIViewExt.swift in Sources */,
 				925DB10320BAA46100680264 /* DriverAnnotation.swift in Sources */,
