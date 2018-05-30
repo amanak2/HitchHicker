@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
 
     @IBOutlet weak var authBtn: RoundedShadowBtn!
     @IBOutlet weak var segmentedController: UISegmentedControl!
@@ -49,16 +49,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                                 "DriverIsOnTrip": false] as [String: Any]
                                 DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: true)
                             }
-                            print("FIR: User Logged In")
                             self.dismiss(animated: true, completion: nil)
                         }
                     } else {
                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
                             switch errorCode {
                             case .wrongPassword:
-                                print("FIR: Wrong Password")
+                                self.showAlert("Wrong Password")
                             default:
-                                print("FIR: unexpected error occured, Please Try Again!")
+                                self.showAlert("unexpected error occured, Please Try Again!")
                             }
                         }
                         
@@ -67,9 +66,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                 if let errorCode = AuthErrorCode(rawValue: error!._code) {
                                     switch errorCode {
                                     case .invalidEmail:
-                                        print("FIR: Invalid Email")
+                                        self.showAlert("Invalid Email")
                                     default:
-                                        print("FIR: unexpected error occured, Please Try Again!")
+                                        self.showAlert("unexpected error occured, Please Try Again!")
                                     }
                                 }
                             } else {
@@ -85,7 +84,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                         DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: true)
                                     }
                                 }
-                                print("FIR: User Created")
                                 self.dismiss(animated: true, completion: nil)
                             }
                         })
