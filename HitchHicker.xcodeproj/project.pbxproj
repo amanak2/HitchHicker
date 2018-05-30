@@ -20,6 +20,8 @@
 		927DA6CC20B81DEF00992CC3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DA6CB20B81DEF00992CC3 /* DataService.swift */; };
 		927F98A120BD5BB80015DE03 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F98A020BD5BB70015DE03 /* UIViewControllerExt.swift */; };
 		9293AAFB20BF044700C04153 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293AAFA20BF044700C04153 /* Alertable.swift */; };
+		9293AAFD20BF105900C04153 /* PickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293AAFC20BF105900C04153 /* PickupVC.swift */; };
+		9293AAFF20BF111C00C04153 /* RoundMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293AAFE20BF111C00C04153 /* RoundMapView.swift */; };
 		92B71AEB20BC3A2500A09F5E /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B71AEA20BC3A2500A09F5E /* PassengerAnnotation.swift */; };
 		92C0B7F220B558D80015DBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F120B558D80015DBF0 /* AppDelegate.swift */; };
 		92C0B7F420B558D80015DBF0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0B7F320B558D80015DBF0 /* HomeVC.swift */; };
@@ -47,6 +49,8 @@
 		927DA6CB20B81DEF00992CC3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		927F98A020BD5BB70015DE03 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		9293AAFA20BF044700C04153 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		9293AAFC20BF105900C04153 /* PickupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupVC.swift; sourceTree = "<group>"; };
+		9293AAFE20BF111C00C04153 /* RoundMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundMapView.swift; sourceTree = "<group>"; };
 		92B71AEA20BC3A2500A09F5E /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
 		92C0B7EE20B558D80015DBF0 /* HitchHicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchHicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0B7F120B558D80015DBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				9249E0F720B724DC00533468 /* RoundedCornersTextField.swift */,
 				925DB10220BAA46100680264 /* DriverAnnotation.swift */,
 				92B71AEA20BC3A2500A09F5E /* PassengerAnnotation.swift */,
+				9293AAFE20BF111C00C04153 /* RoundMapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				9249E0EB20B69E3500533468 /* LeftSidePanelVC.swift */,
 				9249E0ED20B69F3F00533468 /* ContainerVC.swift */,
 				9249E0F520B7021A00533468 /* LoginVC.swift */,
+				9293AAFC20BF105900C04153 /* PickupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +331,8 @@
 				9293AAFB20BF044700C04153 /* Alertable.swift in Sources */,
 				925DB10320BAA46100680264 /* DriverAnnotation.swift in Sources */,
 				925DB10120BA9E2900680264 /* UpdateService.swift in Sources */,
+				9293AAFD20BF105900C04153 /* PickupVC.swift in Sources */,
+				9293AAFF20BF111C00C04153 /* RoundMapView.swift in Sources */,
 				92C0B80920B5771F0015DBF0 /* RoundImageView.swift in Sources */,
 				92C0B80B20B578530015DBF0 /* RoundedShadowView.swift in Sources */,
 				92C0B7F220B558D80015DBF0 /* AppDelegate.swift in Sources */,

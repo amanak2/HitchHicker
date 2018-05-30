@@ -52,7 +52,26 @@ class HomeVC: UIViewController, Alertable {
         revealingSplashView.animationType = SplashAnimationType.heartBeat
         revealingSplashView.startAnimation()
         
-        revealingSplashView.heartAttack = true 
+        revealingSplashView.heartAttack = true
+        
+        UpdateService.instance.observeTrips { (tripDict) in
+            if let tripDict = tripDict {
+                let pickupCoordinateArray = tripDict["pickupCoordinate"] as! NSArray
+                let tripKey = tripDict["passengerKey"] as! String
+                let acceptanceStatus = tripDict["tripAccepted"] as! Bool
+                
+                if acceptanceStatus == false {
+                    DataService.instance.driverIsAvailable(key: (Auth.auth().currentUser?.uid)!, handler: { (available) in
+                        if available == true {
+                            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            let pickupVC = storyboard.instantiateViewController(withIdentifier: "PickupVC") as? PickupVC
+                            pickupVC?.initData(coordiante: CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees), passengerKey: tripKey)
+                            self.present(pickupVC!, animated: true, completion: nil)
+                        }
+                    })
+                }
+            }
+        }
     }
     
     func checkLocAuth() {
@@ -134,7 +153,11 @@ class HomeVC: UIViewController, Alertable {
     }
 
     @IBAction func actionBtnPressed(_ sender: Any) {
+        UpdateService.instance.updateTripsWithCoordinatesOnRequest()
         actionBtn.animateBtn(shouldLoad: true, withMessage: nil)
+        
+        self.view.endEditing(true)
+        destinationTextField.isUserInteractionEnabled = false 
     }
     
     @IBAction func menuBtnPressed(_ sender: Any) {
