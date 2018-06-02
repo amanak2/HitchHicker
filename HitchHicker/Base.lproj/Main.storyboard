@@ -179,6 +179,16 @@
                                     <constraint firstItem="rDI-Z1-Kks" firstAttribute="top" secondItem="YHh-58-ekw" secondAttribute="top" constant="13" id="vzb-2X-sbW"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1S-82-kfa">
+                                <rect key="frame" x="134" y="542" width="107" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="CANCEL TRIP">
+                                    <color key="titleColor" red="0.96862745098039216" green="0.49019607843137253" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTripBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdX-dO-GAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -199,12 +209,15 @@
                             <constraint firstItem="Mkh-Ov-Qyg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="di0-2W-Bm3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dyd-Sg-3jr" secondAttribute="trailing" constant="15" id="ohD-WA-X2l"/>
                             <constraint firstItem="v4j-2B-oCl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qvS-Tx-0Xr"/>
+                            <constraint firstItem="y1S-82-kfa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rfb-kv-HOQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dNU-zt-vrO" secondAttribute="trailing" constant="15" id="tiz-5u-z6A"/>
+                            <constraint firstItem="UES-H3-J8a" firstAttribute="top" secondItem="y1S-82-kfa" secondAttribute="bottom" constant="15" id="whi-rR-BVz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="8LJ-S9-Dty" id="kqi-Xi-Ydz"/>
+                        <outlet property="cancelTripBtn" destination="y1S-82-kfa" id="eD5-3B-NjO"/>
                         <outlet property="centerMapBtn" destination="dNU-zt-vrO" id="HQV-21-iXE"/>
                         <outlet property="destinationCircle" destination="mQA-WS-fmP" id="f4B-FV-dML"/>
                         <outlet property="destinationTextField" destination="Y5n-iH-HoX" id="aV1-iB-DDh"/>
