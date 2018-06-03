@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D6187C25E6D4B73402B17DD /* Pods_HitchHicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091C061E0A0B2C9F50053819 /* Pods_HitchHicker.framework */; };
+		9222BA0120C41DE600E51714 /* Constents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9222BA0020C41DE600E51714 /* Constents.swift */; };
 		9249E0EC20B69E3500533468 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249E0EB20B69E3500533468 /* LeftSidePanelVC.swift */; };
 		9249E0EE20B69F3F00533468 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249E0ED20B69F3F00533468 /* ContainerVC.swift */; };
 		9249E0F120B6AB5D00533468 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9249E0F020B6AB5D00533468 /* CenterVCDelegate.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		091C061E0A0B2C9F50053819 /* Pods_HitchHicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HitchHicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9222BA0020C41DE600E51714 /* Constents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constents.swift; sourceTree = "<group>"; };
 		9249E0EB20B69E3500533468 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		9249E0ED20B69F3F00533468 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		9249E0F020B6AB5D00533468 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9222B9FF20C41DCF00E51714 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9222BA0020C41DE600E51714 /* Constents.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9249E0EF20B6AB0E00533468 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		92C0B7F020B558D80015DBF0 /* HitchHicker */ = {
 			isa = PBXGroup;
 			children = (
+				9222B9FF20C41DCF00E51714 /* Resources */,
 				927DA6CA20B81DE000992CC3 /* Services */,
 				9249E0F220B6F94500533468 /* Extentions */,
 				9249E0EF20B6AB0E00533468 /* Protocols */,
@@ -328,6 +339,7 @@
 				92B71AEB20BC3A2500A09F5E /* PassengerAnnotation.swift in Sources */,
 				9249E0EE20B69F3F00533468 /* ContainerVC.swift in Sources */,
 				9249E0F420B6F96A00533468 /* UIViewExt.swift in Sources */,
+				9222BA0120C41DE600E51714 /* Constents.swift in Sources */,
 				9293AAFB20BF044700C04153 /* Alertable.swift in Sources */,
 				925DB10320BAA46100680264 /* DriverAnnotation.swift in Sources */,
 				925DB10120BA9E2900680264 /* UpdateService.swift in Sources */,

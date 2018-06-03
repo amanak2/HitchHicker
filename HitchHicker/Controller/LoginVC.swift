@@ -44,9 +44,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                                 DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: false)
                             } else {
                                 let userData = ["provider": user.providerID,
-                                                "userIsDriver": true,
-                                                "pickupModeEnabled": false,
-                                                "DriverIsOnTrip": false] as [String: Any]
+                                                USER_IS_DRIVER: true,
+                                                ACCOUNT_PICKUP_MODE_ENABLED: false,
+                                                DRIVER_IS_ON_TRIP: false] as [String: Any]
                                 DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: true)
                             }
                             self.dismiss(animated: true, completion: nil)
@@ -55,9 +55,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
                             switch errorCode {
                             case .wrongPassword:
-                                self.showAlert("Wrong Password")
+                                self.showAlert(ERROR_MSG_WRONG_PASSWORD)
                             default:
-                                self.showAlert("unexpected error occured, Please Try Again!")
+                                self.showAlert(ERROR_MSG_UNEXPECTED_ERROR)
                             }
                         }
                         
@@ -66,9 +66,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                                 if let errorCode = AuthErrorCode(rawValue: error!._code) {
                                     switch errorCode {
                                     case .invalidEmail:
-                                        self.showAlert("Invalid Email")
+                                        self.showAlert(ERROR_MSG_INVALID_EMAIL)
                                     default:
-                                        self.showAlert("unexpected error occured, Please Try Again!")
+                                        self.showAlert(ERROR_MSG_UNEXPECTED_ERROR)
                                     }
                                 }
                             } else {
@@ -78,9 +78,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                                         DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: false)
                                     } else {
                                         let userData = ["provider": user.providerID,
-                                                        "userIsDriver": true,
-                                                        "pickupModeEnabled": false,
-                                                        "DriverIsOnTrip": false] as [String: Any]
+                                                        USER_IS_DRIVER: true,
+                                                        ACCOUNT_PICKUP_MODE_ENABLED: false,
+                                                        DRIVER_IS_ON_TRIP: false] as [String: Any]
                                         DataService.instance.createFIRUser(uid: user.uid, userData: userData, isDriver: true)
                                     }
                                 }
